@@ -57,16 +57,6 @@ else:
 print(f"Votre IMC est de {imc}. Vous êtes en {conseil_imc}")
 
 
-
-
-
-
-# Insérer les données dans la table
-# Insérer les données dans la table en utilisant des paramètres de liaison
-# cursor.execute("INSERT INTO user_imc1 (pseudo, nom, prenom, adresse, date_de_creation) VALUES (?, ?, ?, ?, DATETIME('now'))", (input_pseudo, input_nom, input_prenom, input_adresse))
-
-# cursor.execute("INSERT INTO user_bmi2 (poids, taille, imc_calcul, date_recorded) VALUES (?, ?, ?, DATETIME('now'))", (input_poids, input_taille, imc))
-
 cursor.execute("INSERT INTO user_imc1 (pseudo, nom, prenom, adresse, date_de_creation) VALUES (?, ?, ?, ?, DATETIME('now'))", (input_pseudo, input_nom, input_prenom, input_adresse))
 
 cursor.execute("SELECT id FROM user_imc1 WHERE pseudo = ?", (input_pseudo,))
